@@ -2,6 +2,8 @@ import React from 'react'
 import Logo from '../../assets/logo.png'
 import Link from './Link'
 import { SelectedPage } from '../../shared/types'
+import usemediaQuery from '../../hooks/usemediaQuery'
+import { Bars3Icon } from '@heroicons/react/20/solid'
 
 type Props = {
     setSelectedPage:(value:SelectedPage)=>void
@@ -11,6 +13,7 @@ type Props = {
 
 const Navbar = ({setSelectedPage}: Props) => {
     const flexBetween = 'flex items-center justify-between'
+    const isAboveMediumScreens = usemediaQuery("(min-width:1060px)");
   return (
     <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
            <div className={`${flexBetween} mx-auto w-5/6`}>
@@ -19,40 +22,55 @@ const Navbar = ({setSelectedPage}: Props) => {
                     
                     <img src={Logo}/>
 
+                {isAboveMediumScreens ? (
+  <div className={`${flexBetween} w-full `}>
+
+  <div className={`${flexBetween} mt-4 gap-8 text-sm  `}>
+    <Link page='Home' 
+    selectedPage={SelectedPage}
+    setSelectedPage={setSelectedPage}
+    ></Link>
+
+  <Link page='Benefits' 
+    selectedPage={SelectedPage}
+    setSelectedPage={setSelectedPage}
+    ></Link>
 
 
-                    <div className={`${flexBetween} w-full `}>
-
-                            <div className={`${flexBetween} mt-4 gap-8 text-sm  `}>
-                              <Link page='Home' 
-                              selectedPage={SelectedPage}
-                              setSelectedPage={setSelectedPage}
-                              ></Link>
-
-                            <Link page='Benefits' 
-                              selectedPage={SelectedPage}
-                              setSelectedPage={setSelectedPage}
-                              ></Link>
+<Link page='Our Classes' 
+    selectedPage={SelectedPage}
+    setSelectedPage={setSelectedPage}
+    ></Link>
 
 
-                        <Link page='Our Classes' 
-                              selectedPage={SelectedPage}
-                              setSelectedPage={setSelectedPage}
-                              ></Link>
+  <Link page='Contact Us' 
+    selectedPage={SelectedPage}
+    setSelectedPage={setSelectedPage}
+    ></Link>
 
 
-                            <Link page='Contact Us' 
-                              selectedPage={SelectedPage}
-                              setSelectedPage={setSelectedPage}
-                              ></Link>
+      
+
+  </div>
 
 
-                                
+</div>
 
-                            </div>
+                ):
+                (
 
+                    <button className='rounded-full bg-secondary-500 p-2'>
+                        <Bars3Icon className='w-6 h-6'></Bars3Icon>
 
-                    </div>
+                    </button>
+
+                  
+                )
+            
+            
+            }
+
+                  
                     
                     
                 </div>
