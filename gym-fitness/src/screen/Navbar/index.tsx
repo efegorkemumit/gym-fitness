@@ -4,6 +4,7 @@ import Link from './Link'
 import { SelectedPage } from '../../shared/types'
 import usemediaQuery from '../../hooks/usemediaQuery'
 import { Bars3Icon } from '@heroicons/react/20/solid'
+import ActionButton from '../../shared/ActionButton'
 
 type Props = {
     isTopOfPage:boolean;
@@ -27,33 +28,45 @@ const Navbar = ({isTopOfPage, setSelectedPage}: Props) => {
                 {isAboveMediumScreens ? (
   <div className={`${flexBetween} w-full `}>
 
-  <div className={`${flexBetween} mt-4 gap-8 text-sm  `}>
-    <Link page='Home' 
-    selectedPage={SelectedPage}
-    setSelectedPage={setSelectedPage}
-    ></Link>
+        <div className={`${flexBetween} mt-4 gap-8 text-sm  `}>
+            <Link page='Home' 
+            selectedPage={SelectedPage}
+            setSelectedPage={setSelectedPage}
+            ></Link>
 
-  <Link page='Benefits' 
-    selectedPage={SelectedPage}
-    setSelectedPage={setSelectedPage}
-    ></Link>
-
-
-<Link page='Our Classes' 
-    selectedPage={SelectedPage}
-    setSelectedPage={setSelectedPage}
-    ></Link>
+        <Link page='Benefits' 
+            selectedPage={SelectedPage}
+            setSelectedPage={setSelectedPage}
+            ></Link>
 
 
-  <Link page='Contact Us' 
-    selectedPage={SelectedPage}
-    setSelectedPage={setSelectedPage}
-    ></Link>
+        <Link page='Our Classes' 
+            selectedPage={SelectedPage}
+            setSelectedPage={setSelectedPage}
+            ></Link>
 
 
-      
+        <Link page='Contact Us' 
+            selectedPage={SelectedPage}
+            setSelectedPage={setSelectedPage}
+            ></Link>
 
-  </div>
+
+            
+
+        </div>
+
+        <div className={`${flexBetween} gap-8 `}>
+            <p>Sign In</p>
+            <ActionButton setSelectedPage={setSelectedPage}>
+                Become a Member
+
+            </ActionButton>
+
+        
+         </div>
+
+     
 
 
 </div>
