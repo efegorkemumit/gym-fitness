@@ -6,16 +6,18 @@ import usemediaQuery from '../../hooks/usemediaQuery'
 import { Bars3Icon } from '@heroicons/react/20/solid'
 
 type Props = {
+    isTopOfPage:boolean;
     setSelectedPage:(value:SelectedPage)=>void
 
 
 }
 
-const Navbar = ({setSelectedPage}: Props) => {
+const Navbar = ({isTopOfPage, setSelectedPage}: Props) => {
     const flexBetween = 'flex items-center justify-between'
     const isAboveMediumScreens = usemediaQuery("(min-width:1060px)");
+    const navBarBackGround = isTopOfPage ? "" : "bg-primary-100 drop-shadow shadow-lg"
   return (
-    <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
+    <div className={`${flexBetween} ${navBarBackGround} fixed top-0 z-30 w-full py-6`}>
            <div className={`${flexBetween} mx-auto w-5/6`}>
 
                 <div className={`${flexBetween} w-full gap-16`}>
