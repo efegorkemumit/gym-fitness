@@ -1,9 +1,15 @@
 import React from 'react'
 import Logo from '../../assets/logo.png'
+import Link from './Link'
+import { SelectedPage } from '../../shared/types'
 
-type Props = {}
+type Props = {
+    setSelectedPage:(value:SelectedPage)=>void
 
-const Navbar = (props: Props) => {
+
+}
+
+const Navbar = ({setSelectedPage}: Props) => {
     const flexBetween = 'flex items-center justify-between'
   return (
     <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
@@ -18,10 +24,29 @@ const Navbar = (props: Props) => {
                     <div className={`${flexBetween} w-full `}>
 
                             <div className={`${flexBetween} mt-4 gap-8 text-sm  `}>
-                                <a href='#'> Home</a>
-                                <a href='#'> Home</a>
-                                <a href='#'> Home</a>
-                                <a href='#'> Home</a>
+                              <Link page='Home' 
+                              selectedPage={SelectedPage}
+                              setSelectedPage={setSelectedPage}
+                              ></Link>
+
+                            <Link page='Benefits' 
+                              selectedPage={SelectedPage}
+                              setSelectedPage={setSelectedPage}
+                              ></Link>
+
+
+                        <Link page='Our Classes' 
+                              selectedPage={SelectedPage}
+                              setSelectedPage={setSelectedPage}
+                              ></Link>
+
+
+                            <Link page='Contact Us' 
+                              selectedPage={SelectedPage}
+                              setSelectedPage={setSelectedPage}
+                              ></Link>
+
+
                                 
 
                             </div>
