@@ -22,7 +22,11 @@ export default {
         xs:"480px",
         sm:"768px",
         md:"1060px",
-      }
+      },
+      fontFamily:{
+        dmssans:['DM Sans'],
+        monsterrat:['Montserrat'],
+      },
     },
   },
   plugins: [],
