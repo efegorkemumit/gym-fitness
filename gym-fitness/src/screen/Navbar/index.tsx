@@ -20,6 +20,7 @@ const Navbar = ({isTopOfPage, setSelectedPage}: Props) => {
     const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false);
     const navBarBackGround = isTopOfPage ? "" : "bg-primary-100 drop-shadow shadow-lg"
   return (
+    <nav>
     <div className={`${flexBetween} ${navBarBackGround} fixed top-0 z-30 w-full py-6`}>
            <div className={`${flexBetween} mx-auto w-5/6`}>
 
@@ -99,7 +100,13 @@ const Navbar = ({isTopOfPage, setSelectedPage}: Props) => {
             
             </div>
 
-            {!isAboveMediumScreens && isMenuToggle && 
+           
+
+
+
+    </div>
+
+    {!isAboveMediumScreens && isMenuToggle && 
             (
             <div className='fixed right-0 bottom-0 z-40 h-full w-72 bg-primary-100 drop-shadow shadow-lg' >
 
@@ -142,9 +149,7 @@ const Navbar = ({isTopOfPage, setSelectedPage}: Props) => {
 
             )}
 
-
-
-    </div>
+    </nav>
   )
 }
 
