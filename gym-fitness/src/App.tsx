@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <div>
-      <h1 className="text-3xl bg-red-800  text-white font-bold underline">
+      <div className=''>
+      <h1 className="text-3xl sm:bg-primary-500  text-black font-bold underline">
       Hello world!
     </h1>
       </div>
