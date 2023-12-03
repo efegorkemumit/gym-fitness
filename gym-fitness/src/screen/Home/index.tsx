@@ -19,6 +19,19 @@ const Home = ({setSelecetedPage}: Props) => {
     className='mx-auto w-5/6 items-center justify-center md:flex md:h-5/6'>
 
         <div className='z-10 mt-32 md:basis-3/5'>
+            <motion.div
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true, amount: 0.5 }}
+               transition={{ duration: 0.5 }}
+               variants={{
+                 hidden: { opacity: 0, x: -50 },
+                 visible: { opacity: 1, x: 0 },
+               }}
+               >
+
+
+           
             <div className='relative'>
                 <div className='before:absolute before:-top-10 before:ml-4 before:-z-50  md:before:content-sliderbgtext'>
                     <img src={HomePageText}></img>
@@ -27,7 +40,16 @@ const Home = ({setSelecetedPage}: Props) => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. At, necessitatibus tenetur architecto amet doloribus debitis enim vel expedita eius aliquam quasi deleniti, velit error odit cupiditate provident quidem ratione quos.
                 </p>
 
-                <div className='mt-8 flex items-center gap-8'>
+                <motion.div className='mt-8 flex items-center gap-8'
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: -50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                 >
                     <ActionButton setSelecetedPage={setSelecetedPage}>
                         Join Now
                     </ActionButton>
@@ -36,12 +58,12 @@ const Home = ({setSelecetedPage}: Props) => {
                     className="text-sm font-bold cursor-pointer underline text-primary-500 hover:text-primary-300">
                         Learn More </AnchorLink>
 
-                </div>
+                </motion.div>
 
 
             </div>
 
-
+            </motion.div>
         </div>
 
         <div className='flex basis-3/5 justify-center md:z-10 md:ml-40 md:mt-16 md:justify-items-end'>
