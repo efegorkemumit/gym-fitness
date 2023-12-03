@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import Navbar from './screen/Navbar'
 import Home from './screen/Home';
 import Benefits from './screen/Benefit';
+import OurClasses from './screen/OurClasses';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -33,6 +34,7 @@ function App() {
 
         <Home></Home>
         <Benefits></Benefits>
+        <OurClasses></OurClasses>
 
 
         <p className='mt-96'>aaa</p>
