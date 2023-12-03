@@ -29,6 +29,7 @@ export default {
       },
       content:{
         sliderbgtext:"url('./assets/EvolveText.png')", 
+        abstractwaves:"url('./assets/AbstractWaves.png')", 
       }
     },
   },

@@ -91,9 +91,9 @@ const Benefits = ({setSelecetedPage}: Props) => {
 
 
         <div>
-            <div className='relative'>
+            <div className='relative mt-24'>
 
-                <div className=''>
+                <div className='before:content-abstractwaves before:absolute before:-top-14 before:left-20'>
                 <motion.div
                initial="hidden"
                whileInView="visible"
@@ -120,7 +120,7 @@ const Benefits = ({setSelecetedPage}: Props) => {
 
                     </span>
                     </motion.div>
-                    <motion.div className='mt-8 flex items-center gap-8'
+                    <motion.div className='mt-8 md:flex items-center gap-8'
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.5 }}
