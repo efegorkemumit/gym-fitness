@@ -9,6 +9,8 @@ import image6 from '../../assets/6.png'
 import image7 from '../../assets/7.png'
 import image8 from '../../assets/8.png'
 import image9 from '../../assets/9.png'
+import Htext from '../../shared/Htext'
+import Class from './Class'
 
 const classes : Array<ClassType> = [
     {
@@ -53,11 +55,7 @@ const classes : Array<ClassType> = [
         description:" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
         image:image8,
     },
-    {
-        name:"Zumba  ",
-        description:" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-        image:image9,
-    },
+   
     
 
 
@@ -71,7 +69,47 @@ type Props = {}
 
 const OurClasses = (props: Props) => {
   return (
-    <seciton id="ourclasses">index</seciton>
+    <seciton id="ourclasses" className="w-full mt-14 py-52">
+
+        <div className='mx-auto w-5/6'>
+
+                <div className='md:w-3/5 mb-6'>
+                    <Htext>
+                        Our clases
+                    </Htext>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi necessitatibus blanditiis quibusdam debitis fuga voluptatibus officia quo culpa molestias explicabo aliquam veritatis corporis, libero facilis iste ipsa quisquam facere quaerat!
+                    </p>
+
+
+
+                </div>
+
+                <div  className='flex flex-wrap justify-center items-center text-center'>
+                   
+                   {classes.map((item:ClassType)=>(
+
+<Class
+    key={item.name}
+    name={item.name}
+    description={item.description}
+    image={item.image}>
+
+</Class>
+
+                   ))}
+
+
+                </div>
+
+
+        </div>
+        
+
+
+
+
+    </seciton>
   )
 }
 
