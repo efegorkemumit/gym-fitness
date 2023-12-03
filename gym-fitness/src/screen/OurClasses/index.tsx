@@ -9,8 +9,10 @@ import image6 from '../../assets/6.png'
 import image7 from '../../assets/7.png'
 import image8 from '../../assets/8.png'
 import image9 from '../../assets/9.png'
+import image10 from '../../assets/10.png'
 import Htext from '../../shared/Htext'
 import Class from './Class'
+import {motion} from "framer-motion"
 
 const classes : Array<ClassType> = [
     {
@@ -55,7 +57,17 @@ const classes : Array<ClassType> = [
         description:" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
         image:image8,
     },
-   
+    {
+        name:"Zumba",
+        description:" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+        image:image9,
+    },
+
+    {
+        name:"Gym",
+        description:" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+        image:image10,
+    },
     
 
 
@@ -85,9 +97,20 @@ const OurClasses = (props: Props) => {
 
                 </div>
 
-                <div  className='flex flex-wrap justify-center items-center text-center'>
-                   
+                <div >
+                <motion.div className='flex flex-wrap justify-center items-center text-center'
+                       initial="hidden"
+                       whileInView="visible"
+                       viewport={{ once: true, amount: 0.5 }}
+                       transition={{ duration: 0.5 }}
+                       variants={{
+                         hidden: { opacity: 0, x: -50 },
+                         visible: { opacity: 1, x: 0 },
+                       }}
+                       >
                    {classes.map((item:ClassType)=>(
+                     
+                       
 
 <Class
     key={item.name}
@@ -97,9 +120,10 @@ const OurClasses = (props: Props) => {
 
 </Class>
 
+
                    ))}
 
-
+</motion.div>
                 </div>
 
 
