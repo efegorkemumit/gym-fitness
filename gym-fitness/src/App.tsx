@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from './screen/Navbar'
 import Home from './screen/Home';
+import Benefits from './screen/Benefit';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -31,6 +32,7 @@ function App() {
         ></Navbar>
 
         <Home></Home>
+        <Benefits></Benefits>
 
 
         <p className='mt-96'>aaa</p>
