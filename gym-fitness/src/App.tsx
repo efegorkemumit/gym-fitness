@@ -5,6 +5,7 @@ import Navbar from './screen/Navbar'
 import Home from './screen/Home';
 import Benefits from './screen/Benefit';
 import OurClasses from './screen/OurClasses';
+import Contact from './screen/Contact';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -36,10 +37,7 @@ function App() {
         <Benefits></Benefits>
         <OurClasses></OurClasses>
 
-
-        <p className='mt-96'>aaa</p>
-        <p className='mt-96'>aaa</p>
-        <p className='mt-96'>aaa</p>
+<Contact></Contact>
      
       </div>
     </>
