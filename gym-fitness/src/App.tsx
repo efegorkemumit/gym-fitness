@@ -6,39 +6,41 @@ import Home from './screen/Home';
 import Benefits from './screen/Benefit';
 import OurClasses from './screen/OurClasses';
 import Contact from './screen/Contact';
+import Footer from './screen/Footer';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
-  useEffect(()=>{
-    const handleScrool=()=>{
-      if(window.scrollY ===0){
+  useEffect(() => {
+    const handleScrool = () => {
+      if (window.scrollY === 0) {
         setIsTopOfPage(true);
       }
-      if(window.scrollY !==0){
+      if (window.scrollY !== 0) {
         setIsTopOfPage(false);
       }
     };
     window.addEventListener("scroll", handleScrool);
-    return ()=>window.removeEventListener("scroll", handleScrool);
+    return () => window.removeEventListener("scroll", handleScrool);
 
 
-  },[])
+  }, [])
 
   return (
     <>
       <div className='app bg-gray-20'>
-        <Navbar 
-        isTopOfPage={isTopOfPage}
-        
+        <Navbar
+          isTopOfPage={isTopOfPage}
+
         ></Navbar>
 
         <Home></Home>
         <Benefits></Benefits>
         <OurClasses></OurClasses>
 
-<Contact></Contact>
-     
+        <Contact></Contact>
+        <Footer></Footer>
+
       </div>
     </>
   )

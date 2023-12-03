@@ -43,9 +43,9 @@ const Contact = (props: Props) => {
           </p>
         </div>
 
-        <motion.div className="mt-10 flex gap-8" variants={containerVariants}>
+        <motion.div className="mt-10 flex-none md:flex gap-8" variants={containerVariants}>
           <motion.div
-            className="mt-10 flex-1/2"
+            className="mt-10 flex-1/2 mb-20 md:mb-0"
             variants={formVariants}
           >
             <form>
