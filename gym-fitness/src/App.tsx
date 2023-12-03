@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from './screen/Navbar'
+import Home from './screen/Home';
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -28,6 +29,8 @@ function App() {
         isTopOfPage={isTopOfPage}
         
         ></Navbar>
+
+        <Home></Home>
 
 
         <p className='mt-96'>aaa</p>

@@ -27,6 +27,9 @@ export default {
         dmssans:['DM Sans'],
         monsterrat:['Montserrat'],
       },
+      content:{
+        sliderbgtext:"url('./assets/EvolveText.png')", 
+      }
     },
   },
   plugins: [],
