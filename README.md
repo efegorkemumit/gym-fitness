@@ -19,8 +19,8 @@
 
 
 
-<a href="https://efegorkemumit.github.io/assets/img/course/ts.jpg" rel="nofollow">
-<img src="https://efegorkemumit.github.io/assets/img/course/tailwindcss.jpg" data-canonical-src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&amp;logo=tiktok&amp;logoColor=white style=" style="max-width: 100%;">
+<a href="https://www.udemy.com/course/typescript-ve-tailwindcss-ile-fitness-sitesi-tasarm-yapma/" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/course/ts.jpg" data-canonical-src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&amp;logo=tiktok&amp;logoColor=white style=" style="max-width: 100%;">
 </a>
 
 
